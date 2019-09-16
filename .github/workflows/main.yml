@@ -15,3 +15,5 @@ jobs:
         run: git clone https://github.com/gnachman/iterm2-website.git
       - name: get utils checksums
         run: bash ./_utils/update_checksums.sh && git add files.sha256 && git commit -m "Test" && git push origin HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
