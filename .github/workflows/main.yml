@@ -6,10 +6,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: git clone https://github.com/gnachman/iterm2-website.git
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Checkout iterm2-website repository
+        run: git clone https://github.com/gnachman/iterm2-website.git
+      - name: get utils checksums
+        run: bash ./check_files.sh && git add files.sha256 && git commit -m "Test"
