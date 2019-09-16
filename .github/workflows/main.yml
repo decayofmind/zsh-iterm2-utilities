@@ -1,6 +1,9 @@
-name: CI
+---
+name: Update
 
-on: [push]
+on:
+  schedule:
+    - cron: 0 1 * * *
 
 jobs:
   build:
@@ -9,10 +12,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Checkout iterm2-website repository
-        run: git clone https://github.com/gnachman/iterm2-website.git
+
+      - name: checkout iterm2-website repository
+        run: git clone --depth 1 https://github.com/gnachman/iterm2-website.git
+
       - name: update utils checksums
         run: ./_utils/update_checksums.sh
         env:

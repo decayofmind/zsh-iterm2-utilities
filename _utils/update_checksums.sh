@@ -12,4 +12,4 @@ done
 git add files.sha256
 
 git commit -m "Update files.sha256"
-git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/decayofmind/zsh-iterm2.git" HEAD:master
+git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/decayofmind/zsh-iterm2-utilities.git" HEAD:master
