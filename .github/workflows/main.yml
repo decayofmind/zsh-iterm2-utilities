@@ -13,7 +13,8 @@ jobs:
         run: echo Hello, world!
       - name: Checkout iterm2-website repository
         run: git clone https://github.com/gnachman/iterm2-website.git
-      - name: get utils checksums
-        run: bash ./_utils/update_checksums.sh && git add files.sha256 && git commit -m "Test" && git push origin HEAD:master
+      - name: update utils checksums
+        run: ./_utils/update_checksums.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
