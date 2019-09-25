@@ -1,7 +1,7 @@
 # zsh-iterm2-utilities
 
 Simple, but smart ZSH plugin, helping to download various iTerm2 utilities.
-The pluging allows to omit clonning of the whole iterm2-website repository or
+The plugin allows to omit clonning of the whole iterm2-website repository or
 relying to other repos, where those utilities may be out of sync.
 
 This project utilizes GitHub actions to poll the original iterm2-website repo daily,
