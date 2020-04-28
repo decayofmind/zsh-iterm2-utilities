@@ -15,13 +15,13 @@ the plugin is using that opportunity to download all the utilities.
 
 At ZSH init, only `path` will be extended.
 
-## Zplugin
+## Zinit (former Zplugin)
 
 ```
-zplugin ice as"command" pick"bin/*" atclone'./_utils/download_files.sh' \
+zinit ice as"command" pick"bin/*" atclone'./_utils/download_files.sh' \
   atpull'%atclone' if"[[ $+ITERM_PROFILE ]]"
-zplugin light decayofmind/zsh-iterm2-utilities
+zinit light decayofmind/zsh-iterm2-utilities
 
 # functions
-zplugin snippet 'https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/shell_integration/zsh'
+zinit snippet 'https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/shell_integration/zsh'
 ```
