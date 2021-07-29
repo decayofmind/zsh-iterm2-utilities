@@ -23,5 +23,5 @@ zinit ice as"command" pick"bin/*" atclone'./_utils/download_files.sh' \
 zinit light decayofmind/zsh-iterm2-utilities
 
 # functions
-zinit snippet 'https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/shell_integration/zsh'
+zinit snippet 'https://raw.githubusercontent.com/gnachman/iTerm2-shell-integration/main/shell_integration/zsh'
 ```
