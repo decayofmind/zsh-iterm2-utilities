@@ -7,14 +7,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
 
       - name: checkout iterm2-website repository
-        run: git clone --depth 1 https://github.com/gnachman/iterm2-website.git
+        run: git clone --depth 1 https://github.com/gnachman/iTerm2-shell-integration.git
 
       - name: update utils checksums
         run: ./_utils/update_checksums.sh

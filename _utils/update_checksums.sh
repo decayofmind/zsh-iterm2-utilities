@@ -5,8 +5,8 @@ git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
 
 rm -rf files.sha256
 
-for i in iterm2-website/source/utilities/*; do
-    sha256sum "$i" >> files.sha256
+for i in iTerm2-shell-integration/utilities/*; do
+	sha256sum "$i" >>files.sha256
 done
 
 git add files.sha256
