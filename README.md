@@ -1,5 +1,32 @@
 # zsh-iterm2-utilities
 
+---
+
+**OBSOLETE AND ARCHIVED!**
+
+The author of iTerm2 has moved shell integration to it's own [smaller repo](https://github.com/gnachman/iTerm2-shell-integration),
+so this plugin is not needed anymore.
+
+If you're using [Zinit](https://github.com/zdharma-continuum/zinit) you can achieve same results with the following snippet
+
+```bash
+zinit ice depth"1" \
+  atload'!PATH+=:$(pwd)/utilities'\
+  pick"shell_integration/zsh" if"[[ $+ITERM_PROFILE ]]"
+zinit load gnachman/iTerm2-shell-integration
+```
+
+or better with [zinit-annex-bin-gem-node](https://github.com/zdharma-continuum/zinit-annex-bin-gem-node)
+
+```bash
+zinit ice depth"1" \
+  pick"shell_integration/zsh" \
+  sbin"utilities/*" if"[[ $+ITERM_PROFILE ]]"
+zinit load gnachman/iTerm2-shell-integration
+```
+
+---
+
 Simple, but smart ZSH plugin, helping to download various iTerm2 utilities.
 The plugin allows to omit clonning of the whole iterm2-website repository or
 relying to other repos, where those utilities may be out of sync.
